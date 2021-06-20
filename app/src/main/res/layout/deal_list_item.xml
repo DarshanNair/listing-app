@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="100dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textSize="@dimen/large_case"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        app:layout_constraintTop_toTopOf="@+id/product_image"
+        tools:text="Women's Ultimate Scoop Tee" />
+
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="@dimen/title_case"
+        app:layout_constraintBottom_toBottomOf="@+id/product_image"
+        app:layout_constraintStart_toEndOf="@+id/product_image"
+        tools:text="$12.00" />
+
+    <TextView
+        android:id="@+id/aisle_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/textview_circular_drawable"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textAllCaps="true"
+        android:textColor="@color/red_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/product_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/product_price"
+        tools:text="@string/order_c1" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/separator_or"
+        app:layout_constraintBottom_toBottomOf="@+id/aisle_info"
+        app:layout_constraintEnd_toStartOf="@+id/aisle_info"
+        app:layout_constraintTop_toTopOf="@+id/aisle_info" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/order_Ship"
+        app:layout_constraintBottom_toBottomOf="@+id/aisle_info"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/aisle_info" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/gray_color"
+        app:layout_constraintBottom_toTopOf="@+id/product_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/product_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

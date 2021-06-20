@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_flipper_deal_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:measureAllChildren="false">
+
+    <include layout="@layout/view_deal_loading" />
+
+    <include layout="@layout/view_deal_details_loaded" />
+
+</ViewFlipper>
